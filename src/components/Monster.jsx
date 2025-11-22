@@ -4,6 +4,7 @@ export default function Monster({ color, height = "h-24" }) {
   const eyesRef = useRef([]);
   const pupilsRef = useRef([]);
   const maxMove = 5; // smaller = subtler movement
+  const mouth = useRef([])
 
   // Track mouse and move pupils
   useEffect(() => {
@@ -64,6 +65,9 @@ export default function Monster({ color, height = "h-24" }) {
           />
         </div>
       </div>
-    </div>
+      <div className="absolute w-10 h-1 bg-black bottom-3 "></div>
+      <div className="absolute w-3 h-1 bg-black top-1.2 left-5"></div>
+      <div className="absolute w-3 h-1 bg-black top-1.2 right-5"></div> 
+      </div>
   );
 }
